@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Quiz</title>
+  <link rel="stylesheet" type="text/css" href="q.css">
+</head>
+<body>
+  <div id="home" class="container">
+    <h1>Welcome to Simple Quiz</h1>
+    <button id="startBtn" onclick="startQuiz()">Get Started</button>
+  </div>
+
+  <div id="levels" class="container" style="display: none;">
+    <h1>Choose Your Level</h1>
+    <button id="level1Btn" onclick="startLevel(0)">Level 1</button>
+    <button id="level2Btn" onclick="startLevel(1)">Level 2</button>
+    <button id="level3Btn" onclick="startLevel(2)" disabled>Level 3</button>
+  </div>
+
+  <div id="quiz" class="container" style="display: none;">
+    <h1>Simple Quiz</h1>
+    <div id="question"></div>
+    <div id="options"></div>
+    <button id="submit" onclick="checkAnswer()">Submit</button>
+    <button id="next" onclick="nextQuestion()">Next</button>
+    <div id="result"></div>
+    <div id="score"></div>
+    <div id="timer"><span id="time">40</span> seconds</div>
+    <button id="newRoundBtn" style="display: none;" onclick="startNewRound()">Start New Round</button>
+    <button id="tryAgainBtn" style="display: none;" onclick="tryAgain()">Try Again</button>
+    <button id="pass" onclick="passQuestion()" style="display: none;">Pass</button>
+  </div>
+
+  <div id="timeup" class="container" style="display: none;">
+    <h1>Time's Up!</h1>
+    <p>Don't worry. You can restart the quiz.</p>
+    <button onclick="restartQuiz()">Restart Quiz</button>
+</div>
+
+  <script src="q.js"></script>
+</body>
+</html>
